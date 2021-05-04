@@ -1,0 +1,11 @@
+<h1>Subscribe your topic here</h1>
+
+
+<form action="/pubsub/update/<%=user.email%>" method="POST" style="text-align: center;">
+    <div class="form-group" style=" display: inline-block;">
+        <label for="formGroupExampleInput">Topic Name</label>
+        <input type="text" name="topic" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+      </div>
+      <input type="hidden" name="name" value="<%=user.name%> ">
+    <button class="btn bg-info" type="submit" >Subscribe Now</button>
+  </form>

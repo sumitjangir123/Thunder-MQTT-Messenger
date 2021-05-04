@@ -1,0 +1,167 @@
+#home-container{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-between;
+
+    #top-intro{
+        height: 110vh;
+        width: 100vw;
+        overflow: hidden;
+        animation-duration: 1s;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #feed-posts{
+        height: auto;
+        width: 100%;
+        padding: 10px;
+        #user-name{
+            font-weight: bold;
+        }
+    }
+    
+    #user-friends{
+        #after{
+            width: auto;
+            padding:  10px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-color: white;
+            border:2px solid black;
+            min-width: 300px;
+            height:auto;
+        }
+    }
+
+    #posts-list-container{
+        width: 100%;
+        height: auto;
+        margin: 0;
+        overflow: hidden;
+        ul{
+            list-style: none;
+            display: block;
+            margin: 0;
+            padding: 10px;
+            li{
+                width: 100%;
+                margin-top: 10px;
+                padding: 10px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: center;
+
+                .image-container{
+                    height: 400px;
+                    width: 300px;
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 10px;
+                    margin-bottom: 10px;
+                    img{
+                        background-size: cover;
+                        max-width: 300px;
+                        width: auto;
+                        height: auto;
+                        max-height: 400px;
+                        display: block;
+                    }
+                }
+
+                .except_img{
+                    display: inline-block;
+                    max-width: 300px;
+                    input{
+                        padding: 10px;
+                        width: 300px;
+                        display: block;
+                        margin: 5px;
+                        outline: none;
+                    }
+                    #avatar{
+                        width: 10px;
+                        display: inline-block;
+                        height: 20px;
+                        width: 20px;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                    }
+                
+
+                    .posts_content{
+                        display: block;
+                        padding: 10px;
+                    }
+                    .post-comments{
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        flex-wrap: nowrap;
+
+                       .two{
+                        width: 300px;
+                       }
+                        ul{
+                            overflow: scroll;
+                            max-height: 300px;
+                            width: 305px;
+                            li{
+                                display: inline-block;
+                                margin-top: 0;
+
+                                #comments-like{
+                                    display:  flex;
+                                    justify-content:
+                                    flex-end;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        ul li:nth-child(n+11){
+            display: none;
+        }
+
+
+        #showmore{
+            display: block;
+        }
+    }
+
+}
+
+
+
+
+#check{
+    display: inline;
+}
+
+@media only screen and (min-width: 1400px) {
+    #home-container #top-intro video{
+        width: 100vw;
+    }
+ 
+}
+
+@media only screen and (max-width: 1400px) {
+    #home-container #top-intro video{
+        margin-left: -500px;
+    }
+ 
+}
+
+@media only screen and (max-width: 800px) {
+    #home-container #top-intro video{
+        margin-left: -1000px;
+    }
+
+}

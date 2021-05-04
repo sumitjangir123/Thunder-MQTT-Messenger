@@ -1,0 +1,42 @@
+<header id="layout-header">
+  <nav class="navbar navbar-dark navbar-expand-lg p-0">
+    <button class="navbar-toggler first-button" type="button" data-toggle="collapse"
+      data-target="#navbarTogglerDemo01" aria-controls="#navbarTogglerDemo01" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <div class="animated-icon1"><span></span><span></span><span></span></div>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <a class="navbar-brand" href="/"><img src="<%=assetPath('images/logo.svg') %>" alt="Thunder Bird"
+          style="border-radius: 60%; width: 60px;" class="mx-2"></a>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <% if(locals.user){%>
+        <li class="nav-item active">
+          <a class="nav-link" href="/users/profile/<%=user.id%>"><%=user.name%><span
+              class="sr-only"></span>(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/users/signOut">Sign Out</a>
+        </li>
+        <%}else {%>
+        <li class="nav-item">
+          <a class="nav-link" href="/users/signIn">Sign In</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/users/signUp">Sign Up</a>
+        </li>
+        <%}%>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/privacyPolicies">Privacy Policies</a>
+        </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" id="search-bar" style="display: none;">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search Users" aria-label="Search" id="myInput" onkeyup="findFriends()">
+            </form>
+        </nav>
+</header>
+
+<script src="<%=assetPath('js/header.js') %>"></script>

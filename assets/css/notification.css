@@ -1,0 +1,28 @@
+* {
+  font-family: Helvetica;
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #f0f0f0; }
+
+.notify {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 0;
+  box-sizing: border-box;
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: height .2s; }
+
+#notifyType:before {
+  display: block;
+  margin-top: 15px; }
+
+.active {
+  height: 40px;
+  text-align: center; }
